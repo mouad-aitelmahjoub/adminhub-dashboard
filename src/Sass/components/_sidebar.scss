@@ -1,0 +1,66 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: $sidebar-width;
+  height: 100%;
+  background-color: $light;
+  z-index: 1000;
+
+  &__brand {
+    font-size: 2.4rem;
+    font-weight: 700;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    color: $blue;
+
+    &-icon {
+      min-width: 6rem;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__menu {
+    width: 100%;
+    margin-top: 5rem;
+
+    &-item {
+      position: relative;
+      height: 5rem;
+      background: transparent;
+      margin-left: 0.5rem;
+      border-radius: $border-radius;
+      padding: 0.5rem;
+
+      &.active {
+        background: $grey;
+      }
+
+      &.active::before {
+        content: "";
+        position: absolute;
+      }
+    }
+    &-link {
+      width: 100%;
+      height: 100%;
+      font-size: 1.8rem;
+      background: $light;
+      display: flex;
+      align-items: center;
+      border-radius: 48px;
+      color: $dark;
+
+      &:hover {
+        color: $blue;
+      }
+    }
+    &-icon {
+      min-width: 4rem;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
